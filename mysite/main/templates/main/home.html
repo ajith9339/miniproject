@@ -1,0 +1,29 @@
+{% extends "main/header.html"%}
+
+
+
+{% block content %}
+    {% for tut in Customer %}
+    <div class="col s12 m4">
+        <div class="card">
+            <div class="card-image" style="height: 230px;">
+                <a href={{tut.id}}><img src="{{tut.Customer_imageurl}}" alt="My image"></a>
+                <!-- <span class="card-title"> <p style="color: darkgrey;"> {{tut.tutorial_title}} </p></span> -->
+                <!-- <a class="btn-floating btn-large halfway-fab waves-effect waves-light red"><i class="material-icons ">arrow_forward</i></a> -->
+            </div>
+            <div class="card-content">
+                <p style="font-size: xx-large;"><strong>{{tut.Customer_name}}</strong></p><br>
+                <!-- <p>{{tut.tutorial_published}}</p><br> -->
+                <!-- <p>{{tut.tutorial_imageurl}}</p><br> -->
+                <!-- <p>{{tut.tutorial_content|safe}}</p><br> -->
+            </div>
+            <div class="card-action">
+                <a href={{tut.id}} class="waves-effect waves-light btn teal darken-3 modal-trigger"><i class="material-icons right">arrow_forward</i>More Details</a>
+            </div>
+        </div>
+    </div>
+
+
+    {% endfor %}
+
+{% endblock %}

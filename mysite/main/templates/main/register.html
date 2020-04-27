@@ -1,0 +1,16 @@
+{% extends "main/header.html"%}
+
+{% block content %}
+<h4><strong> Sign Up :</strong></h4><br>
+<div class="container">
+<form method ="POST">
+    {% csrf_token %}
+    {{form.as_p}}
+    <br>
+    <button type="submit" class="btn waves-effect waves-light btn teal darken-3">Register</button>
+    <br><br>
+</form>
+
+if you already have an account, <a href="/login"> <strong> Login </strong></a> instead.
+</div>
+{% endblock %}

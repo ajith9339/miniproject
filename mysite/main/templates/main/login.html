@@ -1,0 +1,21 @@
+{% extends 'main/header.html' %}
+
+{% block content %}
+
+<h4> <strong>Sign In :</strong> </h4><br>
+<div class="container">
+        <br>
+        <form method="POST">
+            {% csrf_token %}
+            {{form.as_p}}
+            <br>
+            <button class="btn waves-effect waves-light btn teal darken-3" type="submit">Login</button>
+            <br><br>
+        </form>
+        Don't have an account? <a href="/register"><strong>Sign Up here </strong> </a>!
+        <br><br> or Login with <a href="/accounts/google/login/"><strong> Google </strong> </a>!
+</div>
+</div>
+
+
+{% endblock %}

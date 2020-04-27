@@ -1,0 +1,17 @@
+{% extends "main/header.html"%}
+
+{% block content %}
+
+ 
+
+<div class="contaioner">
+    <div >
+        <h1 class="header">{{tut.Customer_name}}</h1><br><br>
+            <p>{{tut.Customer_published}}</p><br>
+        <p class="grey-text text-darken-3 lighten-3">{{tut.Customer_content|safe}}</p>
+    </div>
+</div>
+
+
+
+{% endblock %}
